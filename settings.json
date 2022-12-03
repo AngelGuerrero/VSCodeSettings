@@ -1,0 +1,1221 @@
+{
+  "window.menuBarVisibility": "toggle",
+  "workbench.startupEditor": "newUntitledFile",
+  //
+  // VIM SETTINGS
+  //
+  "vim.leader": ",",
+  //
+  // NORMAL MODE
+  //
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      /* Va al inicio en teclado español */
+      "before": [
+        "?",
+      ],
+      "after": [
+        "_"
+      ]
+    },
+    {
+      /* Toggle word wrap */
+      "before": [
+        "<leader>",
+        ".",
+        "z"
+      ],
+      "commands": [
+        "editor.action.toggleWordWrap"
+      ]
+    },
+    {
+      /* Va a un marcador si es que existe */
+      "before": [
+        "<leader>",
+        ".",
+        "<"
+      ],
+      "after": [
+        "'"
+      ]
+    },
+    {
+      /* Va a un marcador si es que existe en teclado español */
+      "before": [
+        "<leader>",
+        ".",
+        ","
+      ],
+      "after": [
+        "'"
+      ]
+    },
+    {
+      /* Sugerencia cuando se esta en modo normal */
+      "before": [
+        "<leader>",
+        ",",
+        "<tab>"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest"
+      ],
+      "when": [
+        "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+      ]
+    },
+    {
+      /* Juntar lineas */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.action.joinLines"
+      ]
+    },
+    // {
+    //   /* Toggle folding */
+    //   "before": [
+    //     "<leader>",
+    //     ",",
+    //     "k",
+    //   ],
+    //   "commands": [
+    //     "editor.toggleFold",
+    //   ]
+    // },
+    {
+      /* Engrapar una palabra y envolver */
+      "before": [
+        "<leader>",
+        "a",
+        "s"
+      ],
+      "after": [
+        "v",
+        "i",
+        "w",
+        "S"
+      ]
+    },
+    {
+      /* Pegar */
+      "before": [
+        "<leader>",
+        ".",
+        "v"
+      ],
+      "commands": [
+        "editor.action.clipboardPasteAction"
+      ]
+    },
+    {
+      /* Cuerpo de una función anónima con coma */
+      "before": [
+        "<leader>",
+        "a",
+        "f",
+        ","
+      ],
+      "after": [
+        "$",
+        "a",
+        "<space>",
+        "=",
+        ">",
+        ",",
+        "<Esc>",
+        "i",
+        "<space>",
+        "{",
+        "<Enter>"
+      ]
+    },
+    {
+      /* Cuerpo de una función anónima */
+      "before": [
+        "<leader>",
+        "a",
+        "f"
+      ],
+      "after": [
+        "$",
+        "a",
+        "<space>",
+        "=",
+        ">",
+        "<space>",
+        "{",
+        "<Enter>"
+      ]
+    },
+    // {
+    //   /* Nuevo objeto */
+    //   "before": ["<leader>", "o", ","],
+    //   "after": ["a", "{", "<Enter>"]
+    // },
+    {
+      /* Nuevo array */
+      "before": [
+        "<leader>",
+        "a",
+        ","
+      ],
+      "after": [
+        "a",
+        "[",
+        "<Enter>"
+      ]
+    },
+    {
+      /* Nuevo item */
+      "before": [
+        "<leader>",
+        "n",
+        ","
+      ],
+      "after": [
+        "$",
+        "a",
+        ",",
+        "<Enter>",
+        "'"
+      ]
+    },
+    {
+      /* Saltar entre las lineas en blanco para abajo */
+      "before": [
+        "W"
+      ],
+      "after": [
+        "{"
+      ]
+    },
+    {
+      /* Saltar entre las lineas en blanco para arriba */
+      "before": [
+        "E"
+      ],
+      "after": [
+        "}"
+      ]
+    },
+    {
+      /* Formatear el documento con el formateador por defecto */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.format"
+      ]
+    },
+    {
+      /* Snippet helper para utilizar el: '<' en español  */
+      "before": [
+        "<leader>",
+        "z"
+      ],
+      "after": [
+        "i",
+        "<"
+      ]
+    },
+    {
+      /* Comparar el archivo usando git y ver sus cambios */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "g",
+        "h"
+      ],
+      "commands": [
+        "git.openChange"
+      ]
+    },
+    {
+      /* Revertir el cambio en el que se esta posicionado */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "g",
+        "d"
+      ],
+      "commands": [
+        "git.revertSelectedRanges"
+      ]
+    },
+    {
+      /* Abrir el archivo actual en otra ventana */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.files.showOpenedFileInNewWindow"
+      ]
+    },
+    {
+      /* Unir la linea de abajo con la de arriba */
+      "before": [
+        "<leader>",
+        ".",
+        "/"
+      ],
+      "after": [
+        "J"
+      ]
+    },
+    {
+      /* Moverse a la izquierda en entre las ventanas abiertas */
+      "before": [
+        "J"
+      ],
+      "after": [
+        "g",
+        "T"
+      ]
+    },
+    {
+      /* Moverse a la derecha entre las ventanas abiertas */
+      "before": [
+        "L"
+      ],
+      "after": [
+        "g",
+        "t"
+      ]
+    },
+    {
+      /* Cerrar los otros editores */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      /* Abrir la paleta de comandos */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      /* Abrir el panel de referencias de la variable seleccionada */
+      "before": [
+        "<leader>",
+        "g",
+        "t"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      /* Mostrar la definicion a un costado, es parecida a la anterior */
+      "before": [
+        "<leader>",
+        ",",
+        "g",
+        "a"
+      ],
+      "commands": [
+        "editor.action.revealDefinitionAside"
+      ]
+    },
+    {
+      /* Ir a una definicion */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "g"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      /* Abrir un archivo */
+      "before": [
+        "<leader>",
+        // ",",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      /* Abrir un archivo de los editores actuales */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "a",
+        "g"
+      ],
+      "commands": [
+        "workbench.action.showEditorsInActiveGroup"
+      ]
+    },
+    {
+      /* Abrir el explorador de archivos */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      /* Revelar el archivo en la barra lateral de directorios */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        "revealInExplorer"
+      ]
+    },
+    {
+      /* Mostrar el archivo actual en el explorador de windows */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "r",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.files.revealActiveFileInWindows"
+      ]
+    },
+    {
+      /* Dividir horizontalmente el editor */
+      "before": [
+        "<leader>",
+        "t",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    {
+      /* Dividir verticalmente el editor */
+      "before": [
+        "<leader>",
+        "t",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      /* Abrir el control de busqueda */
+      "before": [
+        "<leader>",
+        "e",
+        "f"
+      ],
+      "commands": [
+        "actions.find"
+      ]
+    },
+    {
+      /* Abrir el control de busqueda global */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.view.search"
+      ]
+    },
+    {
+      /* Encontrar y reemplazar */
+      "before": [
+        "<leader>",
+        "e",
+        "r"
+      ],
+      "commands": [
+        "actions.find",
+        "editor.action.startFindReplaceAction"
+      ]
+    },
+    {
+      /* Seleccionar todas las ocurrencias encontradas */
+      "before": [
+        "<leader>",
+        "e",
+        "a"
+      ],
+      "commands": [
+        "actions.find",
+        "editor.action.nextMatchFindAction",
+        "search.action.openInEditor"
+      ]
+    },
+    {
+      /* Seleccionar un bloque entero de parentesis, incluyendo la linea */
+      "before": [
+        "<leader>",
+        "b",
+        "p"
+      ],
+      "after": [
+        "v",
+        "a",
+        "("
+      ]
+    },
+    {
+      /* Seleccionar un bloque entero de llaves, incluyendo las llaves */
+      "before": [
+        "<leader>",
+        "b",
+        "a"
+      ],
+      "after": [
+        "V",
+        "a",
+        "{"
+      ]
+    },
+    {
+      /* Seleccionar un bloque de llaves sin incluir la linea, incluyendo las llaves */
+      "before": [
+        "<leader>",
+        "b",
+        "w"
+      ],
+      "after": [
+        "v",
+        "a",
+        "{"
+      ]
+    },
+    {
+      /* Seleccionar una seccion de bloque de llaves, sin incluir las llaves */
+      "before": [
+        "<leader>",
+        "b",
+        "s"
+      ],
+      "after": [
+        "v",
+        "i",
+        "{"
+      ]
+    },
+    {
+      /* Seleccionar un bloque de corchetes, incluyendo la linea */
+      "before": [
+        "<leader>",
+        "b",
+        "e"
+      ],
+      "after": [
+        "V",
+        "a",
+        "["
+      ]
+    },
+    {
+      /* Seleccionar un bloque de corchetes, incluyendo los corchetes */
+      "before": [
+        "<leader>",
+        "b",
+        "g"
+      ],
+      "after": [
+        "v",
+        "a",
+        "["
+      ]
+    },
+    {
+      /* Seleccionar un bloque de corchetes, sin incluyendo los corchetes */
+      "before": [
+        "<leader>",
+        "b",
+        "i"
+      ],
+      "after": [
+        "v",
+        "i",
+        "["
+      ]
+    },
+    {
+      /* Hace un toggle para encontrar todas las ocurrencias */
+      "before": [
+        "<leader>",
+        "t",
+        "w"
+      ],
+      "commands": [
+        "toggleFindWholeWord"
+      ]
+    },
+    {
+      /* Hace un toggle para encontrar entre los casos sensibles a minusculas */
+      "before": [
+        "<leader>",
+        "t",
+        "s"
+      ],
+      "commands": [
+        "toggleFindCaseSensitive"
+      ]
+    },
+    {
+      /* Selecciona una linea completa */
+      "before": [
+        "<leader>",
+        ".",
+        "a"
+      ],
+      "after": [
+        "_",
+        "<C-v>",
+        "$"
+      ]
+    },
+    {
+      /* Pega el contenido copiado en vim en la siguiente linea */
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "$",
+        "<Esc>",
+        "p"
+      ]
+    },
+    {
+      // Start of line
+      "before": [
+        "?"
+      ],
+      "after": [
+        "_"
+      ]
+    },
+    {
+      // Word coincidence
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "after": [
+        "*"
+      ]
+    },
+    {
+      // Guardado rapido
+      // "before": ["<leader>", ".", "e"],
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
+    },
+    // {
+    //   /* Guardado rapido sin formatear */
+    //   "before": ["<leader>", "w"],
+    //   "after": ["<Esc>"],
+    //   "commands": ["workbench.action.files.saveWithoutFormatting"]
+    // },
+    {
+      // Add a new line below
+      "before": [
+        "g",
+        "i"
+      ],
+      "after": [
+        "o",
+        "<Esc>",
+        "k"
+      ]
+    },
+    {
+      // Fast quit
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        ":q!"
+      ]
+    },
+    {
+      // Fast search in spanish
+      "before": [
+        "-"
+      ],
+      "after": [
+        "/"
+      ]
+    },
+    {
+      // Add comma and new line
+      "before": [
+        "ñ",
+        "v"
+      ],
+      "after": [
+        "A",
+        ",",
+        "<Esc>",
+        "o"
+      ]
+    },
+    {
+      /* Agrega una coma al final de la línea y hace un salto de línea */
+      "before": [
+        ";",
+        "v"
+      ],
+      "after": [
+        "A",
+        ",",
+        "<Esc>",
+        "o"
+      ]
+    },
+    {
+      /* Elimina el último caracter de la línea en español */
+      "before": [
+        "ñ",
+        "r"
+      ],
+      "after": [
+        "$",
+        "x",
+        "_"
+      ]
+    },
+    {
+      /* Elimina el último caracter de la línea */
+      "before": [
+        ";",
+        "r"
+      ],
+      "after": [
+        "$",
+        "x",
+        "_"
+      ]
+    },
+    {
+      /* Agrega una coma al final de la línea en español */
+      "before": [
+        "ñ",
+        "a"
+      ],
+      "after": [
+        "A",
+        ",",
+        "<Esc>",
+        "_"
+      ]
+    },
+    {
+      /* Agrega una coma al final de la línea */
+      "before": [
+        ";",
+        "a"
+      ],
+      "after": [
+        "A",
+        ",",
+        "<Esc>",
+        "_"
+      ]
+    },
+    {
+      /* Agrega un espacio entre 2 letras */
+      "before": [
+        "<leader>",
+        "<space>"
+      ],
+      "after": [
+        "a",
+        "<space>",
+        "<Esc>",
+        "h"
+      ]
+    },
+    {
+      /* Agrega un punto y coma al final de una linea, cuando se está en idioma español */
+      "before": [
+        "ñ",
+        "e"
+      ],
+      "after": [
+        "A",
+        ";",
+        "<Esc>"
+      ]
+    },
+    {
+      /* Agrega un punto y coma al final de una linea */
+      "before": [
+        ";",
+        ";"
+      ],
+      "after": [
+        "A",
+        ";",
+        "<Esc>"
+      ]
+    },
+    {
+      /* Elimina el ultimo caracter de una linea */
+      "before": [
+        ";",
+        "r",
+        "r"
+      ],
+      "after": [
+        "$",
+        "x",
+        "_"
+      ]
+    },
+    {
+      /* Comenta una linea con: // */
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      /* Adiciona una linea de comentario como esta: // */
+      "before": [
+        "<leader>",
+        "a",
+        "c"
+      ],
+      "commands": [
+        "editor.action.addCommentLine"
+      ]
+    },
+    {
+      /* Es un comentario de un bloque, como este mismo */
+      "before": [
+        "<leader>",
+        "b",
+        "c"
+      ],
+      "commands": [
+        "editor.action.blockComment"
+      ],
+      "after": [
+        "i"
+      ]
+    },
+    {
+      // Search, find and select current word
+      "before": [
+        "<leader>",
+        "f",
+        ","
+      ],
+      "commands": [
+        "actions.find"
+      ]
+    }
+  ],
+  //
+  // INSERT MODE
+  //
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      /* GitHub copilot, suggest solution */
+      "before": [
+        "<leader>",
+        ",",
+        "g"
+      ],
+      "commands": [
+        "github.copilot.generate"
+      ]
+    },
+    {
+      /* Github copilot suggest inline */
+      "before": [
+        "<leader>",
+        ",",
+        "i"
+      ],
+      "commands": [
+        "editor.action.inlineSuggest.trigger"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        ".",
+        "v"
+      ],
+      "commands": [
+        "editor.action.clipboardPasteAction"
+      ]
+    },
+    {
+      /* Cuerpo de una función anónima */
+      "before": [
+        "<leader>",
+        "a",
+        "f"
+      ],
+      "after": [
+        "<space>",
+        "=",
+        ">",
+        "<space>",
+        "{",
+        "<Enter>"
+      ]
+    },
+    {
+      /* Es un comentario de un bloque, como este mismo */
+      "before": [
+        "<leader>",
+        "b",
+        "c"
+      ],
+      "commands": [
+        "editor.action.blockComment"
+      ]
+    },
+    {
+      /* Abre un nuevo parentesis */
+      "before": [
+        "<leader>",
+        "a",
+        "<Space>"
+      ],
+      "after": [
+        "("
+      ]
+    },
+    {
+      /* Nueno array mientras se escribe */
+      "before": [
+        "<leader>",
+        "a",
+        ","
+      ],
+      "after": [
+        "[",
+        "<Enter>"
+      ]
+    },
+    {
+      /* Nuevo item mientras se escribe */
+      "before": [
+        "<leader>",
+        "n",
+        ","
+      ],
+      "after": [
+        ",",
+        "<Enter>",
+        "'"
+      ]
+    },
+    {
+      /* Escribe el mayor que */
+      "before": [
+        "<leader>",
+        "<leader>",
+        "z"
+      ],
+      "after": [
+        ">"
+      ]
+    },
+    {
+      /* Escribe el menor que */
+      "before": [
+        "<leader>",
+        "z"
+      ],
+      "after": [
+        "<"
+      ]
+    },
+    {
+      /* Cambia a modo normal en vim */
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      /* Modo normal */
+      "before": [
+        "J",
+        "K"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    // {
+    //   /* Guardado rapido */
+    //   "before": ["<leader>", ".", "e"],
+    //   "after": ["<Esc>"],
+    //   "commands": [":w!"]
+    // },
+    // {
+    //   /* Guardado rapido sin formatear */
+    //   "before": ["<leader>", "w"],
+    //   "after": ["<Esc>"],
+    //   "commands": ["workbench.action.files.saveWithoutFormatting"]
+    // },
+    {
+      /* Guardado rapido con formatear */
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [
+        "<Esc>"
+      ],
+      "commands": [
+        ":w!"
+      ]
+    },
+    {
+      /* Sugerencia cuando se esta en modo insertar */
+      "before": [
+        "<leader>",
+        ",",
+        "<"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest"
+      ],
+      "when": [
+        "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+      ]
+    },
+    {
+      /* Sugerencia cuando se esta en modo insertar en teclado español */
+      "before": [
+        "<leader>",
+        ",",
+        ";"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest"
+      ],
+      "when": [
+        "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+      ]
+    },
+    {
+      /* Agrega una coma al final de la linea y agrega una nueva linea */
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "after": [
+        "<Esc>",
+        "A",
+        ",",
+        "<cr>"
+      ]
+    },
+    {
+      /* Hace un toggle a un comentario en modo insert */
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    }
+  ],
+  //
+  // VISUAL MODE
+  //
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        ".",
+        "c"
+      ],
+      "commands": [
+        "editor.action.clipboardCopyAction"
+      ]
+    },
+    {
+      /* Engrapar algo cuando se está seleccionado  */
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "after": [
+        "S"
+      ]
+    },
+    {
+      /* Cambiar a modo normal */
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      /* Comentarios */
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    }
+  ],
+  "editor.fontLigatures": true,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 3,
+  "editor.tabSize": 2,
+  "editor.cursorSmoothCaretAnimation": true,
+  "scss.lint.duplicateProperties": "error",
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "vetur.format.defaultFormatter.css": "none",
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "vetur.grammar.customBlocks": {
+    "docs": "md",
+    "i18n": "json",
+    "preview-props": "json"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "vscode.typescript-language-features"
+  // },
+  "editor.cursorSurroundingLinesStyle": "all",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vetur.completion.autoImport": false,
+  "editor.renderWhitespace": "none",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "prettier.endOfLine": "lf",
+  "workbench.iconTheme": "vs-seti",
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "html.format.wrapAttributesIndentSize": 4,
+  "eslint.format.enable": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnPaste": false,
+  "terminal.external.windowsExec": "C:\\Program Files\\Git\\git-bash.exe",
+  "prettier.printWidth": 80,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "prettier.singleAttributePerLine": true,
+  "prettier.bracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "gitlens.currentLine.scrollable": false,
+  "editor.fontFamily": "'Cascadia Code', monospace",
+  "editor.guides.indentation": false,
+  "editor.wordBasedSuggestions": false,
+  "editor.inlineSuggest.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.userWords": [
+    "awesomelist",
+    "bata",
+    "composables",
+    "firestore",
+    "logrusorgru",
+    "numbro",
+    "Reasignación",
+    "rundll",
+    "vuefire",
+    "vuesax",
+    "Vuesax",
+    "vuex",
+    "Vuex",
+    "vuexfire"
+  ],
+  "editor.minimap.enabled": false,
+}
