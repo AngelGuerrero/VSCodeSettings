@@ -1,14 +1,78 @@
 {
-  "window.menuBarVisibility": "toggle",
-  "workbench.startupEditor": "newUntitledFile",
-  //
-  // VIM SETTINGS
-  //
   "vim.leader": ",",
   //
   // NORMAL MODE
   //
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        ".",
+        "t",
+        "c"
+      ],
+      "commands": [
+        // "workbench.action.files.copyPathOfActiveFile"
+        "renameFile"
+      ]
+    },
+    {
+      /* Genera un test */
+      "before": [
+        "<leader>",
+        ",",
+        "a",
+        "t"
+      ],
+      "commands": [
+        "github.copilot.interactiveEditor.generateTests"
+      ]
+    },
+    {
+      /* Guardar todo */
+      "before": [
+        "<leader>",
+        ".",
+        ",",
+        ".",
+        "a"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        ",",
+        "q"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    // {
+    //   /* Guardar a una mano sin formatear */
+    //   "before": [
+    //     "<leader>",
+    //     ".",
+    //     "o"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.files.saveWithoutFormatting"
+    //   ]
+    // },
+    {
+      /* Guardar sin formatear */
+      "before": [
+        "<leader>",
+        ".",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.saveWithoutFormatting"
+      ]
+    },
     {
       /* Va al inicio en teclado español */
       "before": [
@@ -88,20 +152,6 @@
     //   ]
     // },
     {
-      /* Engrapar una palabra y envolver */
-      "before": [
-        "<leader>",
-        "a",
-        "s"
-      ],
-      "after": [
-        "v",
-        "i",
-        "w",
-        "S"
-      ]
-    },
-    {
       /* Pegar */
       "before": [
         "<leader>",
@@ -112,79 +162,34 @@
         "editor.action.clipboardPasteAction"
       ]
     },
-    {
-      /* Cuerpo de una función anónima con coma */
-      "before": [
-        "<leader>",
-        "a",
-        "f",
-        ","
-      ],
-      "after": [
-        "$",
-        "a",
-        "<space>",
-        "=",
-        ">",
-        ",",
-        "<Esc>",
-        "i",
-        "<space>",
-        "{",
-        "<Enter>"
-      ]
-    },
-    {
-      /* Cuerpo de una función anónima */
-      "before": [
-        "<leader>",
-        "a",
-        "f"
-      ],
-      "after": [
-        "$",
-        "a",
-        "<space>",
-        "=",
-        ">",
-        "<space>",
-        "{",
-        "<Enter>"
-      ]
-    },
     // {
-    //   /* Nuevo objeto */
-    //   "before": ["<leader>", "o", ","],
-    //   "after": ["a", "{", "<Enter>"]
+    //   /* Nuevo array */
+    //   "before": [
+    //     "<leader>",
+    //     "a",
+    //     ","
+    //   ],
+    //   "after": [
+    //     "a",
+    //     "[",
+    //     "<Enter>"
+    //   ]
     // },
-    {
-      /* Nuevo array */
-      "before": [
-        "<leader>",
-        "a",
-        ","
-      ],
-      "after": [
-        "a",
-        "[",
-        "<Enter>"
-      ]
-    },
-    {
-      /* Nuevo item */
-      "before": [
-        "<leader>",
-        "n",
-        ","
-      ],
-      "after": [
-        "$",
-        "a",
-        ",",
-        "<Enter>",
-        "'"
-      ]
-    },
+    // {
+    //   /* Nuevo item */
+    //   "before": [
+    //     "<leader>",
+    //     "n",
+    //     ","
+    //   ],
+    //   "after": [
+    //     "$",
+    //     "a",
+    //     ",",
+    //     "<Enter>",
+    //     "'"
+    //   ]
+    // },
     {
       /* Saltar entre las lineas en blanco para abajo */
       "before": [
@@ -204,7 +209,7 @@
       ]
     },
     {
-      /* Formatear el documento con el formateador por defecto */
+      /* Formatear el documento con el formateado por defecto */
       "before": [
         "<leader>",
         "<leader>",
@@ -265,7 +270,8 @@
       "before": [
         "<leader>",
         ".",
-        "/"
+        "/",
+        "m"
       ],
       "after": [
         "J"
@@ -325,7 +331,7 @@
       ]
     },
     {
-      /* Mostrar la definicion a un costado, es parecida a la anterior */
+      /* Mostrar la definición a un costado, es parecida a la anterior */
       "before": [
         "<leader>",
         ",",
@@ -337,7 +343,7 @@
       ]
     },
     {
-      /* Ir a una definicion */
+      /* Ir a una definición */
       "before": [
         "<leader>",
         "<leader>",
@@ -351,7 +357,6 @@
       /* Abrir un archivo */
       "before": [
         "<leader>",
-        // ",",
         "m"
       ],
       "commands": [
@@ -386,7 +391,8 @@
       "before": [
         "<leader>",
         "<leader>",
-        "r"
+        "r",
+        "<Enter>"
       ],
       "commands": [
         "revealInExplorer"
@@ -427,7 +433,7 @@
       ]
     },
     {
-      /* Abrir el control de busqueda */
+      /* Abrir el control de búsqueda */
       "before": [
         "<leader>",
         "e",
@@ -438,7 +444,7 @@
       ]
     },
     {
-      /* Abrir el control de busqueda global */
+      /* Abrir el control de búsqueda global */
       "before": [
         "<leader>",
         "<leader>",
@@ -474,7 +480,7 @@
       ]
     },
     {
-      /* Seleccionar un bloque entero de parentesis, incluyendo la linea */
+      /* Seleccionar un bloque entero de paréntesis, incluyendo la linea */
       "before": [
         "<leader>",
         "b",
@@ -513,7 +519,7 @@
       ]
     },
     {
-      /* Seleccionar una seccion de bloque de llaves, sin incluir las llaves */
+      /* Seleccionar una sección de bloque de llaves, sin incluir las llaves */
       "before": [
         "<leader>",
         "b",
@@ -576,7 +582,7 @@
       ]
     },
     {
-      /* Hace un toggle para encontrar entre los casos sensibles a minusculas */
+      /* Hace un toggle para encontrar entre los casos sensibles a minúsculas */
       "before": [
         "<leader>",
         "t",
@@ -600,7 +606,7 @@
       ]
     },
     {
-      /* Pega el contenido copiado en vim en la siguiente linea */
+      /* Pega el contenido copiado en la siguiente linea */
       "before": [
         "<leader>",
         "p"
@@ -631,7 +637,7 @@
       ]
     },
     {
-      // Guardado rapido
+      // Guardado rápido
       // "before": ["<leader>", ".", "e"],
       "before": [
         "<leader>",
@@ -642,7 +648,7 @@
       ]
     },
     // {
-    //   /* Guardado rapido sin formatear */
+    //   /* Guardado rápido sin formatear */
     //   "before": ["<leader>", "w"],
     //   "after": ["<Esc>"],
     //   "commands": ["workbench.action.files.saveWithoutFormatting"]
@@ -670,7 +676,7 @@
       ]
     },
     {
-      // Fast search in spanish
+      // Rápida búsqueda en español
       "before": [
         "-"
       ],
@@ -705,22 +711,11 @@
       ]
     },
     {
-      /* Elimina el último caracter de la línea en español */
+      /* Elimina el último carácter de la línea en español */
       "before": [
         "ñ",
-        "r"
-      ],
-      "after": [
-        "$",
-        "x",
-        "_"
-      ]
-    },
-    {
-      /* Elimina el último caracter de la línea */
-      "before": [
-        ";",
-        "r"
+        "r",
+        "<Enter>"
       ],
       "after": [
         "$",
@@ -792,7 +787,7 @@
       ]
     },
     {
-      /* Elimina el ultimo caracter de una linea */
+      /* Elimina el ultimo carácter de una linea */
       "before": [
         ";",
         "r",
@@ -849,12 +844,34 @@
       "commands": [
         "actions.find"
       ]
-    }
+    },
+    // {
+    //   /* Next panel solution */
+    //   "before": [
+    //     "<leader>",
+    //     ",",
+    //     "]"
+    //   ],
+    //   "commands": [
+    //     "github.copilot.nextPanelSolution"
+    //   ]
+    // },
   ],
   //
   // INSERT MODE
   //
   "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      /* Guardar sin formatear */
+      "before": [
+        "<leader>",
+        ".",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.saveWithoutFormatting"
+      ]
+    },
     {
       /* GitHub copilot, suggest solution */
       "before": [
@@ -870,8 +887,8 @@
       /* Github copilot suggest inline */
       "before": [
         "<leader>",
-        ",",
-        "i"
+        ".",
+        "t",
       ],
       "commands": [
         "editor.action.inlineSuggest.trigger"
@@ -881,7 +898,7 @@
       "before": [
         "<leader>",
         ".",
-        "v"
+        "v",
       ],
       "commands": [
         "editor.action.clipboardPasteAction"
@@ -915,7 +932,7 @@
       ]
     },
     {
-      /* Abre un nuevo parentesis */
+      /* Abre un nuevo paréntesis */
       "before": [
         "<leader>",
         "a",
@@ -926,7 +943,7 @@
       ]
     },
     {
-      /* Nueno array mientras se escribe */
+      /* Nuevo array mientras se escribe */
       "before": [
         "<leader>",
         "a",
@@ -992,19 +1009,19 @@
       ]
     },
     // {
-    //   /* Guardado rapido */
+    //   /* Guardado rápido */
     //   "before": ["<leader>", ".", "e"],
     //   "after": ["<Esc>"],
     //   "commands": [":w!"]
     // },
     // {
-    //   /* Guardado rapido sin formatear */
+    //   /* Guardado rápido sin formatear */
     //   "before": ["<leader>", "w"],
     //   "after": ["<Esc>"],
     //   "commands": ["workbench.action.files.saveWithoutFormatting"]
     // },
     {
-      /* Guardado rapido con formatear */
+      /* Guardado rápido con formatear */
       "before": [
         "<leader>",
         "w"
@@ -1073,6 +1090,18 @@
   //
   "vim.visualModeKeyBindingsNonRecursive": [
     {
+      /* code snap */
+      "before": [
+        "<leader>",
+        ".",
+        "m",
+        "m"
+      ],
+      "commands": [
+        "codesnap.start"
+      ]
+    },
+    {
       "before": [
         "<leader>",
         ".",
@@ -1113,23 +1142,21 @@
       ]
     }
   ],
-  "editor.fontLigatures": true,
   "editor.smoothScrolling": true,
   "editor.mouseWheelScrollSensitivity": 3,
   "editor.tabSize": 2,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "scss.lint.duplicateProperties": "error",
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vetur.format.defaultFormatter.css": "none",
-  "vetur.format.defaultFormatter.html": "none",
   "vetur.format.defaultFormatter.js": "prettier-eslint",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vetur.grammar.customBlocks": {
     "docs": "md",
@@ -1140,20 +1167,17 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "[html]": {
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // "[typescript]": {
-  //   "editor.defaultFormatter": "vscode.typescript-language-features"
-  // },
   "editor.cursorSurroundingLinesStyle": "all",
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -1170,11 +1194,8 @@
     "editor.tabCompletion": "onlySnippets"
   },
   "security.workspace.trust.untrustedFiles": "open",
-  "prettier.endOfLine": "lf",
-  "workbench.iconTheme": "vs-seti",
   "explorer.confirmDragAndDrop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "html.format.wrapAttributesIndentSize": 4,
   "eslint.format.enable": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -1186,36 +1207,361 @@
   "prettier.printWidth": 80,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "prettier.singleAttributePerLine": true,
   "prettier.bracketSameLine": true,
   "prettier.jsxSingleQuote": true,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
   "gitlens.currentLine.scrollable": false,
-  "editor.fontFamily": "'Cascadia Code', monospace",
   "editor.guides.indentation": false,
-  "editor.wordBasedSuggestions": false,
-  "editor.inlineSuggest.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "cSpell.userWords": [
+    "acreditable",
+    "ACREDITABLE",
+    "ajax",
+    "Anel",
+    "apikeys",
+    "APPPATH",
+    "arrachera",
+    "Arrayable",
+    "ASPNETCORE",
+    "aspnetcorerazor",
+    "astype",
+    "autoloading",
+    "autorizacion",
     "awesomelist",
+    "axios",
     "bata",
+    "bbva",
+    "BBVA",
+    "bgcolor",
+    "Blazor",
+    "bulkload",
+    "bulma",
+    "Buro",
+    "buró",
+    "Cascadia",
+    "cedula",
+    "cellspacing",
+    "Chía",
+    "Chilaquiles",
+    "Chocomilk",
+    "clabe",
+    "clangarm",
     "composables",
+    "conceptualización",
+    "concubinario",
+    "Conditionable",
+    "Contáctanos",
+    "csharpier",
+    "csrf",
+    "daniela",
+    "Daniela",
+    "DATEONLY",
+    "Dayana",
+    "Debugbar",
+    "deepseek",
+    "direccionar",
+    "Dispatchable",
+    "dockercompose",
+    "dotnet",
+    "dotnettools",
+    "economica",
+    "eduardo",
+    "elvia",
+    "Empanizado",
+    "Enchilado",
+    "Enfrijoladas",
+    "Entregables",
+    "esbenp",
+    "Escalabilidad",
+    "esnext",
+    "Estocolmo",
+    "facebook",
+    "figma",
+    "Fira",
     "firestore",
+    "Fisica",
+    "fiusha",
+    "fontawesome",
+    "formkit",
+    "fortawesome",
+    "gamificación",
+    "Gamificación",
+    "gitlab",
+    "gsap",
+    "headlessui",
+    "Hostnames",
+    "hstore",
+    "huggingface",
+    "instanciada",
+    "invalidchars",
+    "Iuse",
+    "jetstream",
+    "keras",
+    "kpis",
+    "laialab",
+    "Laravel",
+    "Lilisfood",
+    "linkedin",
+    "Livewire",
     "logrusorgru",
+    "Maatwebsite",
+    "mariadb",
+    "Maximas",
+    "montos",
+    "montserrat",
+    "Mpdf",
     "numbro",
+    "nunito",
+    "nuxt",
+    "Nuxt",
+    "nuxtjs",
+    "okrs",
+    "ollama",
+    "olympia",
+    "openai",
+    "Paginación",
+    "Parens",
+    "Paycash",
+    "PAYCASH",
+    "perfilador",
+    "perfilamiento",
+    "Photoroom",
+    "phpstan",
+    "pigui",
+    "Pigui",
+    "pinia",
+    "Planeación",
+    "pldinterview",
+    "postgres",
+    "postgresql",
+    "prebuild",
+    "psicométricas",
+    "qrcode",
+    "Querétaro",
     "Reasignación",
+    "redaxios",
+    "redhat",
+    "Reestablecer",
+    "Referer",
+    "Regenerativo",
+    "regenerativos",
+    "renderizado",
+    "renderizar",
+    "riesgosa",
+    "roboto",
+    "Roboto",
+    "ROOTPATH",
     "rundll",
+    "saira",
+    "scminput",
+    "secureheaders",
+    "Segoe",
+    "shopify",
+    "sigmoide",
+    "sobreescribe",
+    "sordoceguera",
+    "sordociegas",
+    "sqlite",
+    "stackblitz",
+    "superadmin",
+    "tailwindcss",
+    "tcpdf",
+    "TCPDF",
+    "Tekylab",
+    "tensorflow",
+    "toastify",
+    "Tokenización",
+    "twilio",
+    "typeit",
+    "typeorm",
+    "ucrt",
+    "Ulises",
+    "unicode",
+    "unref",
+    "unsplash",
+    "Uribe",
+    "uuidv",
+    "UUIDV",
+    "vcentered",
+    "verifíquelo",
+    "vetur",
+    "vmargs",
     "vuefire",
     "vuesax",
     "Vuesax",
+    "vuetify",
     "vuex",
     "Vuex",
-    "vuexfire"
+    "vuexfire",
+    "webp",
+    "websockets",
+    "Weetrust",
+    "whatsapp",
+    "xampp",
+    "youtube",
+    "yoyo",
+    "Zarape",
+    "zustand"
   ],
-  "editor.minimap.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false
+  },
+  "editor.tabCompletion": "on",
+  "editor.linkedEditing": true,
+  "cSpell.language": "en,es-ES",
+  "terminal.integrated.env.windows": {},
+  "settingsSync.ignoredSettings": [
+    "-php.validate.executablePath"
+  ],
+  "php-built-in-server.phpExecutable": "C:\\xampp\\php\\php.exe",
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "xml.server.vmargs": "-Xmx128M",
+  "cmake.additionalCompilerSearchDirs": [
+    "C:/msys64/mingw32/bin",
+    "C:/msys64/mingw64/bin",
+    "C:/msys64/clang32/bin",
+    "C:/msys64/clang64/bin",
+    "C:/msys64/clangarm64/bin",
+    "C:/msys64/ucrt64/bin"
+  ],
+  "editor.fontLigatures": true,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "php.validate.enable": true,
+  "php.suggest.basic": true,
+  "php.executables": {
+    "8.1.0": "C:\\xampp\\php\\php.exe"
+  },
+  "php.executablePath": "C:\\xampp\\php\\php.exe",
+  "php.version": "8.1.0",
+  "editor.formatOnSaveMode": "modifications",
+  // Muestra el inicio de la linea en la que se esta escribiendo
+  "gitlens.graph.scrollMarkers.additionalTypes": [
+    "localBranches",
+    "stashes",
+    "remoteBranches"
+  ],
+  "gitlens.graph.minimap.additionalTypes": [
+    "localBranches",
+    "stashes",
+    "remoteBranches",
+    "tags"
+  ],
+  "gitlens.ai.experimental.openai.model": "gpt-4",
+  "console-ninja.featureSet": "Community",
+  "prettier.endOfLine": "auto",
+  "files.eol": "\n",
+  "[blade]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.defaultFormatter": null
+  },
+  "github.copilot.editor.enableCodeActions": false,
+  "editor.fontFamily": "'Cascadia Code'",
+  "omnisharp.sdkIncludePrereleases": false,
+  "files.associations": {
+    "*.razor": "razor"
+  },
+  "workbench.panel.defaultLocation": "bottom",
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+  },
+  "enableTelemetry": false,
+  "editor.experimental.asyncTokenization": true,
+  "editor.cursorBlinking": "expand",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.inlayHints.fontFamily": "Jost",
+  "editor.inlayHints.fontSize": 10,
+  "editor.inlayHints.padding": true,
+  "editor.minimap.maxColumn": 100,
+  "editor.minimap.showSlider": "always",
+  "window.menuBarVisibility": "hidden",
+  "vscode-edge-devtools.webhintInstallNotification": true,
+  "gitlens.launchpad.indicator.enabled": false,
+  "indentRainbow.colorOnWhiteSpaceOnly": false,
+  "editor.guides.highlightActiveBracketPair": true,
+  "workbench.editor.untitled.labelFormat": "name",
+  "window.commandCenter": false,
+  "workbench.colorCustomizations": {
+    // "tab.activeBorder": "#139dec",
+    // "breadcrumb.foreground": "#fff",
+    // "editor.background": "#000",
+    // "editor.selectionBackground": "#10b9c569",
+    "tab.activeBorderTop": "#03afff",
+  },
+  "codesnap.showWindowTitle": true,
+  "codesnap.realLineNumbers": true,
+  "codesnap.roundedCorners": true,
+  "codesnap.shutterAction": "copy",
+  "window.customTitleBarVisibility": "auto",
+  "vscode-edge-devtools.headless": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "xml": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.location": "bottom",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "workbench.colorTheme": "Monokai Pro",
+  "extensions.ignoreRecommendations": true,
+  "terminal.integrated.stickyScroll.enabled": true,
+  "workbench.layoutControl.enabled": false,
+  "tailwindcss-intellisense.trace.server": "verbose",
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on"
+  },
+  "terminal.integrated.suggest.enabled": true,
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/{info,lfs,logs,refs,objects}/**",
+    ".git/{index,*refs,*HEAD}",
+    ".vscode",
+    ".vscode-insiders",
+    ".svg",
+    "*.svg"
+  ],
+  "explorer.confirmDelete": false,
+  "workbench.iconTheme": "Monokai Pro Icons",
 }
